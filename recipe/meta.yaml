@@ -23,9 +23,9 @@ build:
     # Including libgcc_s for the time
     # being. This will need to be broken
     # out in the long term.
-    - lib/libgcc_s.{{ libgcc_s_version[0] }}.dylib         # [osx]
-    - lib/libgcc_s_ppc64.{{ libgcc_s_version[0] }}.dylib   # [osx]
-    - lib/libgcc_s_x86_64.{{ libgcc_s_version[0] }}.dylib  # [osx]
+    - lib/libgcc_s.{{ libgcc_s_version[0] }}.dylib            # [osx]
+    - lib/libgcc_s_ppc64.{{ libgcc_s_version[0] }}.dylib      # [osx]
+    - lib/libgcc_s_x86_64.{{ libgcc_s_version[0] }}.dylib     # [osx]
 
 requirements:
   build:
