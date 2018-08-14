@@ -38,8 +38,8 @@ test:
     - test -f "${PREFIX}/lib/libgfortran.dylib"                                   # [osx]
     - test -f "${PREFIX}/lib/libgfortran.{{ libgfortran_version[0] }}.dylib"      # [osx]
 
-    - test -f "${PREFIX}/lib/libgomp.dylib  # [osx]
-    - test -f "${PREFIX}/lib/libgomp.{{ libgcc_s_version[0] }}.dylib  # [osx]
+    - test -f "${PREFIX}/lib/libgomp.dylib"  # [osx]
+    - test -f "${PREFIX}/lib/libgomp.{{ libgcc_s_version[0] }}.dylib"  # [osx]
 
     # Including libquadmath for the time
     # being. This will need to be broken
