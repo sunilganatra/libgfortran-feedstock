@@ -8,11 +8,13 @@ package:
   version: {{ libgfortran_version|join('.') }}
 
 build:
-  number: 0
+  number: 1
   skip: true                                                  # [not osx]
   always_include_files:
     - lib/libgfortran.dylib                                   # [osx]
     - lib/libgfortran.{{ libgfortran_version[0] }}.dylib      # [osx]
+    - lib/libgomp.dylib  # [osx]
+    - lib/libgomp.{{ libgcc_s_version[0] }}.dylib  # [osx]
 
     # Including libquadmath for the time
     # being. This will need to be broken
@@ -35,6 +37,9 @@ test:
   commands:
     - test -f "${PREFIX}/lib/libgfortran.dylib"                                   # [osx]
     - test -f "${PREFIX}/lib/libgfortran.{{ libgfortran_version[0] }}.dylib"      # [osx]
+
+    - test -f "${PREFIX}/lib/libgomp.dylib"  # [osx]
+    - test -f "${PREFIX}/lib/libgomp.{{ libgcc_s_version[0] }}.dylib"  # [osx]
 
     # Including libquadmath for the time
     # being. This will need to be broken
