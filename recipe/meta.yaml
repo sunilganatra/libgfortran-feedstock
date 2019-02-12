@@ -5,10 +5,13 @@
 
 package:
   name: libgfortran
-  version: {{ libgfortran_version|join('.') }}
+  # This is hacked to match the higher version on defaults to make conda-forge 
+  # more compatible with defaults.
+  # The actual libs are the same.
+  version: 3.0.1
 
 build:
-  number: 1001
+  number: 0
   skip: true                                                  # [not osx]
   always_include_files:
     - lib/libgfortran.dylib                                   # [osx]
