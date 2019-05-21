@@ -35,4 +35,4 @@ if [[ "${UPLOAD_PACKAGES}" != "False" ]]; then
     upload_package "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 fi
 
-touch "/home/conda/feedstock_root/build_artifacts/conda-forge-build-done-${CONFIG}"(base) 
+touch "/home/conda/feedstock_root/build_artifacts/conda-forge-build-done-${CONFIG}"
